@@ -1,0 +1,99 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                >
+
+
+
+
+
+
+
+
+              <TextView
+                  android:id="@+id/events_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="5dp"
+                  android:textSize="30sp"
+                  android:text="爸爸生日"
+                  android:layout_centerInParent="true"
+                  android:textColor="#000000"
+                  />
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+        <View  android:layout_height="2px"
+            android:layout_width="match_parent"
+            android:background="#b78f8f8f"
+
+            />
+        <RelativeLayout
+            android:id="@+id/events_color_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#469FEE"
+            >
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+        <TextView
+            android:id="@+id/before_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还有"
+            android:layout_margin="5dp"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:id="@+id/days_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:text="25"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="天"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            />
+
+        </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

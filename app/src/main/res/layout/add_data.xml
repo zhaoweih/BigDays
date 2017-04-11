@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6FA"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        app:cardCornerRadius="5dp"
+        android:layout_centerInParent="true"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="?attr/colorPrimary"
+          >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:text="事件标题"
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+            <EditText
+                android:hint="例如：生日"
+                android:gravity="center"
+                android:id="@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textColorHint="#DCDCDC"
+                android:textCursorDrawable="@drawable/edit_cursor_color"
+
+                />
+
+        </LinearLayout>
+
+      </RelativeLayout>
+
+
+
+            <DatePicker
+                android:id="@+id/myDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:startYear="2015"
+                android:endYear="2020"
+                android:spinnersShown="true"
+                />
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

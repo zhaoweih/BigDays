@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/warn_btn"
+        android:title="Warn"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_warning"
+        />
+    <item
+        android:id="@+id/update_btn"
+        android:title="Update"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_done"
+        />
+</menu>
