@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6FA"
+    android:background="@color/bg_color"
     >
 
     <android.support.v7.widget.Toolbar
@@ -16,107 +16,30 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        app:cardCornerRadius="5dp"
-        android:layout_centerInParent="true">
+
+
+
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <RelativeLayout
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_marginTop="20dp"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_centerInParent="true"
-            />
-        </RelativeLayout>
-
-        <TextView
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BigDays·大日子"
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#000000"
-            />
-
-            <TextView
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="“记住属于你的每个大日子”"
-                android:textSize="13sp"
-                android:layout_gravity="center_horizontal"
-                />
-
-            <TextView
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="V 1.0"
-                android:textSize="13sp"
-                android:layout_gravity="center_horizontal"
-                />
-            <TextView
-                android:layout_marginTop="135dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="作者：赵威豪"
-                android:textSize="13sp"
-                android:layout_gravity="center_horizontal"
-                />
-
-            <TextView
-                android:layout_marginTop="3dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="投诉与建议：1028410337@qq.com"
-                android:textSize="13sp"
-                android:layout_gravity="center_horizontal"
-                />
-
-            <TextView
-                android:layout_marginTop="10dp"
-                android:textSize="10sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="风格：Material Design"
-                android:layout_gravity="center_horizontal"
-                />
-            <TextView
-                android:textSize="10sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="应用内图标由Google设计"
-                android:layout_gravity="center_horizontal"
-                />
-            <View
-                android:layout_marginTop="3dp"
-                android:layout_height="2px"
+            <RelativeLayout
+                android:id="@+id/about_layout"
                 android:layout_width="match_parent"
-                android:background="#b78f8f8f"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                ></RelativeLayout>
 
-                />
+
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#F69429"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/orange"
                 >
 
             <LinearLayout
@@ -128,19 +51,21 @@
                 >
                 <TextView
                     android:textSize="16sp"
-                    android:text="距离大日子诞生过去"
+                    android:text="@string/from_bigdays"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/white"
                     />
                 <TextView
-                    android:textSize="30sp"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/about_day"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="25"
                     android:textColor="@color/white"
                     />
                 <TextView
@@ -148,23 +73,24 @@
                     android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="天"
+                    android:text="@string/day"
                     android:textColor="@color/white"
                     />
 
             </LinearLayout>
             </RelativeLayout>
 
-
-
-
-
-
         </LinearLayout>
 
 
 
 
-        </android.support.v7.widget.CardView>
-    </RelativeLayout>
-    </LinearLayout>
+
+
+
+
+
+
+
+
+   </LinearLayout>

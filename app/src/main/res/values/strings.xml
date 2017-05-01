@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">大日子</string>
+    <string name="app_name">日子君</string>
+    <string name="add_events">点击右下方按钮添加事件</string>
+    <string name="title_isEmpty">事件标题不能为空</string>
+    <string name="update_successfully">修改成功</string>
+    <string name="add_successfully">添加成功</string>
+    <string name="warn_text">事件标题请尽量简洁，以保持主界面整体美观</string>
+    <string name="still_text">还有</string>
+    <string name="is_text">就是</string>
+    <string name="today_text">今</string>
+    <string name="zoom_today_text">今天</string>
+    <string name="past_text">过去</string>
+    <string name="delete_successfully">删除成功</string>
+    <string name="add">增加</string>
+    <string name="update">修改</string>
+    <string name="about">关于</string>
+    <string name="zoom">详情</string>
+    <string name="event_title">事件标题</string>
+    <string name="hint_text">例如：生日</string>
+    <string name="still">还有</string>
+    <string name="day">天</string>
+    <string name="from_text">距离</string>
+    <string name="target_day">目标日:</string>
+    <string name="ok_text">确认</string>
+    <string name="cancel_text">取消</string>
+    <string name="sure_update_text">你确定要修改吗？</string>
+    <string name="sure_detele_text">你确定要删除吗？</string>
+    <string name="description">记住属于你的每个大日子</string>
+    <string name="contact">联系方式</string>
+    <string name="from_bigdays">距离日子君诞生过去</string>
 </resources>

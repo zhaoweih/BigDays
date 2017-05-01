@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.weihaozhao.bigdays.MainActivity"
-            android:label="大日子"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +20,17 @@
             </intent-filter>
         </activity>
         <activity android:name="com.weihaozhao.bigdays.AddDataActivity"
-            android:label="增加"></activity>
+            android:screenOrientation="portrait"
+            android:label="@string/add"></activity>
         <activity android:name="com.weihaozhao.bigdays.ZoomActivity"
-            android:label="详情"></activity>
+            android:screenOrientation="portrait"
+            android:label="@string/zoom"></activity>
         <activity android:name="com.weihaozhao.bigdays.UpdateDataActivity"
-            android:label="修改"></activity>
+            android:screenOrientation="portrait"
+            android:label="@string/update"></activity>
         <activity android:name="com.weihaozhao.bigdays.AboutActivity"
-            android:label="关于"></activity>
+            android:screenOrientation="portrait"
+            android:label="@string/about"></activity>
     </application>
 
 </manifest>

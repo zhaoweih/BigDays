@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6FA"
+    android:background="@color/bg_color"
 
     >
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg"
+        android:src="@drawable/image"
         />
 
 
@@ -25,11 +25,9 @@
 
 
     <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_margin="8dp"
         app:cardCornerRadius="5dp"
         android:layout_centerInParent="true"
         >
@@ -37,20 +35,12 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <!--<TextView-->
-                <!--android:id="@+id/events_id"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal"-->
-                <!--android:layout_margin="5dp"-->
-                <!--android:textSize="16sp"-->
-                <!--/>-->
 
             <RelativeLayout
                 android:id="@+id/zoom_layout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/colorPrimary"
                 >
 
             <LinearLayout
@@ -64,7 +54,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="距离"
+                android:text="@string/from_text"
                 android:textSize="20sp"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="3dp"
@@ -86,7 +76,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:text="爸爸生日"
                     android:layout_margin="3dp"
                     android:textColor="@color/white"
                     android:layout_gravity="center_vertical"
@@ -96,7 +85,7 @@
                 android:id="@+id/before_day_zoom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="还有"
+                android:text="@string/still"
                 android:textSize="20sp"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="3dp"
@@ -107,11 +96,7 @@
             </LinearLayout>
             </RelativeLayout>
 
-            <View  android:layout_height="2px"
-                android:layout_width="match_parent"
-                android:background="#b78f8f8f"
 
-                />
 
 
 
@@ -128,8 +113,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_margin="5dp"
                     android:textSize="100sp"
-                    android:text="15"
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
                     />
 
 
@@ -148,7 +132,7 @@
                 android:layout_margin="15dp"
                 >
                 <TextView
-                    android:text="目标日:"
+                    android:text="@string/target_day"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -158,7 +142,6 @@
                     android:id="@+id/show_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2017-04-01"
                     android:textSize="15sp"
                     />
 

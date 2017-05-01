@@ -1,0 +1,102 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="5dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/nav_header"
+            android:alpha="0.3"
+            >
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+
+                <TextView
+                    android:textStyle="italic"
+                    android:id="@+id/top_events_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="30sp"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    />
+            </RelativeLayout>
+
+
+
+
+
+
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/top_events_color_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            >
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+                <TextView
+                    android:id="@+id/top_before_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/still"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:text="4"
+                    android:id="@+id/top_days_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day"
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -5,7 +5,8 @@ import org.litepal.crud.DataSupport;
 import java.util.Calendar;
 
 /**
- * Created by Administrator on 2017/3/29.
+ * Created by Zhao Weihao on 2017/4/2.
+ * Updated by Zhao Weihao on 2017/5/1
  */
 
 public class Events extends DataSupport implements Comparable<Events>{
@@ -53,28 +54,6 @@ public class Events extends DataSupport implements Comparable<Events>{
     }
 
     public int getId(){return id;}
-
-//    @Override
-//    public int compareTo(Events o) {
-//        int y = o.getYear() - this.getYear();
-//        int m =o.getMonth()-this.getMonth();
-//        int d=o.getDay()-this.getDay();
-//        if(y == 0&&m!=0){
-//            return m;
-//        }else if(y==0&&m==0){
-//            return d;
-//        }
-//        return y;
-//    }
-
-//    @Override
-//    public int compareTo(Events e) {
-//        long i = this.dayLeft(getYear(),getMonth(),getDay()) - e.dayLeft(getYear(),getMonth(),getDay());//先按照年龄排序
-//        int z=Integer.parseInt(String.valueOf(i));
-//        return z;
-//    }
-//
-
 
     @Override
     public int compareTo(Events o) {

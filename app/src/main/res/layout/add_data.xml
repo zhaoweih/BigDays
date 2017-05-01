@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6FA"
+    android:background="@color/bg_color"
     >
 
     <android.support.v7.widget.Toolbar
@@ -17,37 +17,24 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
     <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
         app:cardCornerRadius="5dp"
-        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
         >
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-      <RelativeLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:background="?attr/colorPrimary"
-          >
+
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
             >
 
             <TextView
-                android:text="事件标题"
+                android:text="@string/event_title"
                 android:layout_margin="5dp"
                 android:textSize="16sp"
                 android:textColor="@color/white"
@@ -55,38 +42,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"/>
             <EditText
-                android:hint="例如：生日"
+                android:hint="@string/hint_text"
                 android:gravity="center"
                 android:id="@+id/edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
-                android:textColorHint="#DCDCDC"
+                android:textColorHint="@color/hint"
                 android:textCursorDrawable="@drawable/edit_cursor_color"
 
                 />
 
-        </LinearLayout>
-
-      </RelativeLayout>
-
-
-
             <DatePicker
+                android:background="@color/white"
                 android:id="@+id/myDatePicker"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_height="match_parent"
                 android:startYear="2015"
                 android:endYear="2020"
                 android:spinnersShown="true"
                 />
+
         </LinearLayout>
-
-
-
-
 
 
 
@@ -95,11 +73,5 @@
 
     </android.support.v7.widget.CardView>
 
-    </RelativeLayout>
+        </LinearLayout>
 
-
-
-
-
-
-</LinearLayout>

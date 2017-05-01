@@ -1,6 +1,7 @@
 package com.weihaozhao.bigdays;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -15,7 +16,8 @@ import com.weihaozhao.bigdays.db.Events;
 import java.util.Calendar;
 
 /**
- * Created by Administrator on 2017/3/29.
+ * Created by Zhao Weihao on 2017/4/2.
+ * Updated by Zhao Weihao on 2017/5/1
  */
 
 public class AddDataActivity extends AppCompatActivity {
@@ -30,38 +32,17 @@ public class AddDataActivity extends AppCompatActivity {
 
     private int year,month,day;
 
+    private Events events;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_data);
-        datePicker= (DatePicker) findViewById(R.id.myDatePicker);
-        editText= (EditText) findViewById(R.id.edit_text);
-        toolbar= (Toolbar) findViewById(R.id.toolbar_add);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar=getSupportActionBar();
-        if(actionBar!=null){
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-        calendar = Calendar.getInstance();
 
-        year = calendar.get(Calendar.YEAR);
-        month = calendar.get(Calendar.MONTH) + 1;
-        day = calendar.get(Calendar.DAY_OF_MONTH);
+        initViews();
 
-
-
-        datePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
-            @Override
-            public void onDateChanged(DatePicker view, int yearOfPick, int monthOfYear, int dayOfMonth) {
-                year=yearOfPick;
-                month=monthOfYear+1;
-                day=dayOfMonth;
-            }
-        });
-
-
-
+        getDays();
 
     }
 
@@ -76,20 +57,20 @@ public class AddDataActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.add:
                 if(editText.getText().toString().isEmpty()){
-                    Toast.makeText(this, "事件标题不能为空", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, R.string.title_isEmpty, Toast.LENGTH_SHORT).show();
+                    Snackbar.make(editText,R.string.title_isEmpty,Snackbar.LENGTH_SHORT).show();
                     break;
                 }else {
-                Events events=new Events();
-                events.setEventsname(editText.getText().toString());
-                events.setYear(year);
-                events.setMonth(month);
-                events.setDay(day);
-                events.save();
-                    Toast.makeText(this, "添加成功", Toast.LENGTH_SHORT).show();
+
+                    saveDays();
+
+                    Toast.makeText(this, R.string.add_successfully, Toast.LENGTH_SHORT).show();
+//                    Snackbar.make(editText,R.string.update_successfully,Snackbar.LENGTH_SHORT).show();
                 finish();
                 break;}
             case R.id.warn:
-                Toast.makeText(this, "事件标题请尽量简洁，以保持主界面整体美观", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, R.string.warn_text, Toast.LENGTH_SHORT).show();
+                Snackbar.make(editText,R.string.warn_text,Snackbar.LENGTH_SHORT).show();
                 break;
             case android.R.id.home:
                 finish();
@@ -98,5 +79,48 @@ public class AddDataActivity extends AppCompatActivity {
 
         }
         return true;
+    }
+
+    private void initViews(){
+
+        datePicker= (DatePicker) findViewById(R.id.myDatePicker);
+        editText= (EditText) findViewById(R.id.edit_text);
+        toolbar= (Toolbar) findViewById(R.id.toolbar_add);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
+    }
+
+    private void getDays(){
+
+        calendar = Calendar.getInstance();
+
+        year = calendar.get(Calendar.YEAR);
+        month = calendar.get(Calendar.MONTH) + 1;
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        datePicker.init(year, month-1, day, new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker view, int yearOfPick, int monthOfYear, int dayOfMonth) {
+                year=yearOfPick;
+                month=monthOfYear+1;
+                day=dayOfMonth;
+            }
+        });
+
+    }
+
+    private void saveDays(){
+
+        events=new Events();
+        events.setEventsname(editText.getText().toString());
+        events.setYear(year);
+        events.setMonth(month);
+        events.setDay(day);
+        events.save();
+
     }
 }
