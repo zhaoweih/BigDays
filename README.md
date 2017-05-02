@@ -1,22 +1,18 @@
 ﻿# 应用名称：日子君
 ![](https://github.com/zhaoweihaoChina/BigDays/blob/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png)
----
-# 截图:
----
 
+# 截图:
 
 ![](https://github.com/zhaoweihaoChina/BigDays/blob/master/screenshot/untitle.png)
 
 # 介绍:
 
----
 
 - *记住属于你的每个大日子*
 
 
 # 开源库的使用：
 
----
 | 项目 | 介绍   | 项目地址|
 | ------| :--------  | :------- |
 | LitePal  | LitePal是一款开源的Android数据库框架。它采用ORM模式，并将我们平时开发最常用到的一些数据库功能进行了封装，使得不用编写一行SQL语句就可以完成各种建表和增删改查的操作 |https://github.com/LitePalFramework/LitePal
@@ -24,7 +20,6 @@
 
 # 更新日志：
 
----
 - 2017/5/2 10:42更新
 更新README.MD
 
@@ -37,16 +32,13 @@
 
 
 # 联系方式：
----
 
-**作者:Zhao Weihao**
-**邮箱:[zhaoweihaochn@foxmail.com](mailto:zhaoweihaochn@foxmail.com)**
-**博客:[Zhaoweihao'sBlog](https://zhaoweihaochina.github.io)**
+**作者:Zhao Weihao**<br>
+**邮箱:[zhaoweihaochn@foxmail.com](mailto:zhaoweihaochn@foxmail.com)**<br>
+**博客:[Zhaoweihao'sBlog](https://zhaoweihaochina.github.io)**<br>
 
 
 # LICENSE:
-
----
 
 
      Copyright {2017} {Zhao Weihao}
