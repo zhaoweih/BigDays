@@ -1,4 +1,4 @@
-package com.weihaozhao.bigdays;
+package com.weihaozhao.bigdays.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.weihaozhao.bigdays.R;
 import com.weihaozhao.bigdays.db.Events;
 
 /**

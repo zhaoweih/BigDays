@@ -1,47 +1,35 @@
-﻿# 应用名称：日子君
+### **应用名称Application name：日子君BigDays**
+
+### 图标Icon:
 ![](https://github.com/zhaoweihaoChina/BigDays/blob/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# 截图:
+### 截图Screenshots:
 
-![](https://github.com/zhaoweihaoChina/BigDays/blob/master/screenshot/untitle.png)
+![](https://github.com/zhaoweihaoChina/BigDays/blob/master/screenshot/2.png)
 
-# 介绍:
-
-
-- *记住属于你的每个大日子*
+### 介绍Description:
 
 
-# 开源库的使用：
-
-| 项目 | 介绍   | 项目地址|
-| ------| :--------  | :------- |
-| LitePal  | LitePal是一款开源的Android数据库框架。它采用ORM模式，并将我们平时开发最常用到的一些数据库功能进行了封装，使得不用编写一行SQL语句就可以完成各种建表和增删改查的操作 |https://github.com/LitePalFramework/LitePal
+- *记录属于你的每个大日子* 
+- Records all of your big days
 
 
-# 更新日志：
+### 开源库的使用Open source library ：
 
-- 2017/5/2 10:42更新
-更新README.MD
-
-- 2017/5/2 0:09更新
-更新UI 增强用户体验 修复BUG
-明天再更新README.MD
-
-- 2017/3/31 更新
- 完成 Version 1.0
-
-# 赞赏：
-**如果你觉得我的工作值得赞赏，可以请我[喝杯咖啡](http://upload-images.jianshu.io/upload_images/5796527-edda21883be58f26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800)**
+name | description
+---- | ---
+litepal |  An Android library that makes developers use SQLite database extremely easy
+android-about-page |  Create an awesome About Page for your Android App in 2 minutes
 
 
-# 联系方式：
+### 联系方式Contact：
 
-**作者:Zhao Weihao**<br>
-**邮箱:[zhaoweihaochn@foxmail.com](mailto:zhaoweihaochn@foxmail.com)**<br>
-**博客:[Zhaoweihao'sBlog](https://zhaoweihaochina.github.io)**<br>
+**邮箱Email：zhaoweihaochn@foxmail.com**
+
+**博客Blog：zhaoweihao.me**
 
 
-# LICENSE:
+### 协议License:
 
 
      Copyright 2017 Zhao Weihao

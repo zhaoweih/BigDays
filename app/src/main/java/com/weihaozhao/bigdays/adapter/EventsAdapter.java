@@ -1,4 +1,4 @@
-package com.weihaozhao.bigdays;
+package com.weihaozhao.bigdays.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.weihaozhao.bigdays.R;
+import com.weihaozhao.bigdays.activity.ZoomActivity;
 import com.weihaozhao.bigdays.db.Events;
 
 import java.util.Calendar;

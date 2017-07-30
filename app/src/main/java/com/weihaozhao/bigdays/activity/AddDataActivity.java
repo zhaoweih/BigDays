@@ -1,4 +1,4 @@
-package com.weihaozhao.bigdays;
+package com.weihaozhao.bigdays.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -11,6 +11,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.weihaozhao.bigdays.R;
 import com.weihaozhao.bigdays.db.Events;
 
 import java.util.Calendar;

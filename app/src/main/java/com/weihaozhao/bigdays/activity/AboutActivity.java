@@ -1,4 +1,4 @@
-package com.weihaozhao.bigdays;
+package com.weihaozhao.bigdays.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.weihaozhao.bigdays.R;
 
 import java.util.Calendar;
 

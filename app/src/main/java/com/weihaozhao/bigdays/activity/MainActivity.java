@@ -1,4 +1,4 @@
-package com.weihaozhao.bigdays;
+package com.weihaozhao.bigdays.activity;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.weihaozhao.bigdays.R;
+import com.weihaozhao.bigdays.adapter.EventsAdapter;
 import com.weihaozhao.bigdays.db.Events;
 
 import org.litepal.crud.DataSupport;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Events> eventsList;
 
-    private  EventsAdapter adapter;
+    private EventsAdapter adapter;
 
     private RecyclerView recyclerView;
 

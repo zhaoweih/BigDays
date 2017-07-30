@@ -1,4 +1,4 @@
-package com.weihaozhao.bigdays;
+package com.weihaozhao.bigdays.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.weihaozhao.bigdays.R;
 import com.weihaozhao.bigdays.db.Events;
 
 import org.litepal.crud.DataSupport;
