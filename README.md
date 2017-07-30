@@ -7,6 +7,9 @@
 
 ![](https://github.com/zhaoweihaoChina/BigDays/blob/master/screenshot/2.png)
 
+### 下载Download:
+#### [Fir.im](https://fir.im/bigday)
+
 ### 介绍Description:
 
 
