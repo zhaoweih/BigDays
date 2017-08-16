@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="addday"
+        android:enabled="true"
+        android:icon="@drawable/ic_add"
+        android:shortcutShortLabel="@string/add_day"
+        android:shortcutLongLabel="@string/add_day">
+        <intent
+            android:action="com.weihaozhao.bigdays.addday"
+            android:targetPackage="com.weihaozhao.bigdays"
+            android:targetClass="com.weihaozhao.bigdays.activity.AddDataActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+
+</shortcuts>

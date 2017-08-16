@@ -28,4 +28,5 @@
     <string name="description">记住属于你的每个大日子</string>
     <string name="contact">联系方式</string>
     <string name="from_bigdays">距离日子君诞生过去</string>
+    <string name="add_day">增加大日子</string>
 </resources>

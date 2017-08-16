@@ -79,15 +79,6 @@ public class MainActivity extends AppCompatActivity {
         }else {
             cardView.setVisibility(View.INVISIBLE);
         }
-
-
-
-
-
-
-
-
-
     }
 
     @Override
