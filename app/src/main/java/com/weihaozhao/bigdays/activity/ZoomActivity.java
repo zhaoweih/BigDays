@@ -1,27 +1,41 @@
 package com.weihaozhao.bigdays.activity;
 
+import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.weihaozhao.bigdays.R;
 import com.weihaozhao.bigdays.db.Events;
+import com.zhihu.matisse.Matisse;
+import com.zhihu.matisse.MimeType;
+import com.zhihu.matisse.engine.impl.GlideEngine;
 
 import org.litepal.crud.DataSupport;
 
 import java.util.Calendar;
+import java.util.List;
 
 
 /**
@@ -59,6 +73,12 @@ public class ZoomActivity extends AppCompatActivity {
 
     private AlertDialog.Builder dialog;
 
+    private final int REQUEST_CODE_CHOOSE=0;
+
+    private List<Uri> mSelected;
+
+    private ImageView mImageView;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,8 +91,6 @@ public class ZoomActivity extends AppCompatActivity {
         getDays();
 
         refresh();
-
-
 
     }
 
@@ -100,6 +118,7 @@ public class ZoomActivity extends AppCompatActivity {
 
                 buildDialog();
 
+
                 break;
             case R.id.update:
                 Intent toUpdate=new Intent(ZoomActivity.this,UpdateDataActivity.class);
@@ -113,9 +132,31 @@ public class ZoomActivity extends AppCompatActivity {
             case android.R.id.home:
                 finish();
                 break;
+            case R.id.imageChange:
+                // request permission
+                if(ContextCompat.checkSelfPermission(ZoomActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(ZoomActivity.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},1);
+                }else{
+                    showImageSelector();
+                }
+
+                break;
                 default:
         }
         return true;
+    }
+
+    private void showImageSelector() {
+
+        Matisse.from(ZoomActivity.this)
+                .choose(MimeType.allOf())
+                .countable(true)
+                .maxSelectable(1)
+                .gridExpectedSize(getResources().getDimensionPixelSize(R.dimen.grid_expected_size))
+                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
+                .thumbnailScale(0.85f)
+                .imageEngine(new GlideEngine())
+                .forResult(REQUEST_CODE_CHOOSE);
     }
 
     private long dayLeft(int y,int m,int d){
@@ -166,6 +207,10 @@ public class ZoomActivity extends AppCompatActivity {
 
         relativeLayout = (RelativeLayout) findViewById(R.id.zoom_layout);
 
+        mImageView= (ImageView) findViewById(R.id.zoom_bg);
+
+
+
 
     }
 
@@ -208,6 +253,36 @@ public class ZoomActivity extends AppCompatActivity {
             relativeLayout.setBackgroundColor(getResources().getColor(R.color.orange));
         }
 
+        SharedPreferences preferences=getSharedPreferences("data",MODE_PRIVATE);
+
+        String imageUriString=preferences.getString("imageUri",null);
+
+
+
+        if(imageUriString!=null){
+            Uri imageUri=Uri.parse(imageUriString);
+            mImageView.setImageURI(imageUri);
+        }else{
+            mImageView.setImageDrawable(getResources().getDrawable(R.drawable.image));
+        }
+
+
+
+
+
+
+//        mImageView.setImageURI(events.getImageUri());
+
+//        if(events.getImageUri()==null){
+//            Uri uri = Uri.parse("android.resource://com.weihaozhao.bigdays/drawable/image");
+//            mImageView.setImageURI(uri);
+//
+//        }else{
+//            mImageView.setImageURI(events.getImageUri());
+//
+//
+//        }
+
 
     }
 
@@ -238,6 +313,42 @@ public class ZoomActivity extends AppCompatActivity {
         dialog.show();
     }
 
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_CHOOSE && resultCode == RESULT_OK) {
+            mSelected = Matisse.obtainResult(data);
+            Log.d("Matisse", "mSelected: " + mSelected);
+
+            mImageView.setImageURI(mSelected.get(0));
+
+            SharedPreferences.Editor editor=getSharedPreferences("data",MODE_PRIVATE).edit();
+            editor.putString("imageUri",mSelected.get(0).toString());
+            editor.apply();
+
+            Toast.makeText(this, "Set up successfully", Toast.LENGTH_SHORT).show();
+
+        }else if(requestCode!=RESULT_OK&&requestCode!=RESULT_CANCELED){
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch(requestCode){
+            case 1:
+                if(grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                    showImageSelector();
+                }else{
+                    Toast.makeText(this, "You denied the permission", Toast.LENGTH_SHORT).show();
+                }
+
+                break;
+            default:
+        }
+    }
 
 
 }

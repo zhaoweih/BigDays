@@ -1,5 +1,7 @@
 package com.weihaozhao.bigdays.db;
 
+import android.net.Uri;
+
 import org.litepal.crud.DataSupport;
 
 import java.util.Calendar;
@@ -20,7 +22,6 @@ public class Events extends DataSupport implements Comparable<Events>{
     private int month;
 
     private int day;
-
 
 
     public int getYear(){
