@@ -108,7 +108,7 @@ public class AboutActivity extends AppCompatActivity {
                 .isRTL(false)
                 .setDescription(getString(R.string.description))
                 .setImage(R.mipmap.ic_launcher)
-                .addItem(new Element().setTitle("Version 2.0"))
+                .addItem(new Element().setTitle("Version 3"))
                 .addGroup(getString(R.string.contact))
                 .addWebsite("https://zhaoweihaochina.github.io/")
                 .addPlayStore("com.weihaozhao.bigdays")

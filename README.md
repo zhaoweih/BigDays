@@ -10,6 +10,12 @@ AN ANDROID APP CAN AUTOMATICALLY CALCULATE HOW MANY DAYS FROM YOUR BIGDAYS
 
 ![](https://github.com/zhaoweihaoChina/BigDays/blob/master/screenshot/PIC.png)
 
+###下载 Download:
+
+https://fir.im/bigday
+
+
+
 ### 开源库的使用Open Source Library ：
 
 | NAME               | DESCRIPTION                              |
