@@ -4,7 +4,7 @@
 
 记录重要日子，显示离重要日子还有多少天
 
-AN ANDROID APP CAN AUTOMATICALLY CALCULATE HOW MANY DAYS FROM YOUR BIGDAYS
+An Android Application can automatically calculate how many days from your bigdays
 
 ### 截图Screenshots:
 
@@ -27,7 +27,7 @@ https://fir.im/bigday
 
 ### 联系方式Contact：
 
-**Email：zhaoweihaochn#gmail.com**
+**Email：zhaoweihaochn#foxmail.com**
 
 **Blog：http://zhaoweihao.me**
 
