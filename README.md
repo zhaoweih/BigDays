@@ -27,9 +27,9 @@ https://fir.im/bigday
 
 ### 联系方式Contact：
 
-**Email：zhaoweihaochn#foxmail.com**
+**Email：zhaoweihao.dev#gmail.com**
 
-**Blog：http://zhaoweihao.me**
+**Blog：http://zhaoweihao.com**
 
 
 ### 协议License:
